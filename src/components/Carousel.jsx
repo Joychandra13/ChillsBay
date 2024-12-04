@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/react";
 import React, { useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+
 
 
 const carouselData = [
@@ -84,7 +84,7 @@ const Carousel = () => {
             onClick={handlePrevious}
             className="absolute left-0 transform -translate-x-6 flex items-center justify-center bg-blue-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-600 transition"
           >
-            <FaChevronLeft />
+            <ChevronLeftIcon />
           </button>
 
           {/* Content */}
@@ -134,7 +134,7 @@ const Carousel = () => {
             onClick={handleNext}
             className="absolute right-0 transform translate-x-6 flex items-center justify-center bg-green-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-600 transition"
           >
-            <FaChevronRight />
+            <ChevronRightIcon />
           </button>
         </div>
 
