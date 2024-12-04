@@ -72,7 +72,7 @@ const Carousel = () => {
   const currentSlide = carouselData[currentIndex];
 
   return (
-    <section className="overflow-x-hidden">
+    <section className="overflow-x-hidden p-5">
       <h1 className="text-center text-2xl lg:text-5xl text-[#26395C] mt-24 mb-12 font-semibold">
         See How People are Chilling On Chillsbay
       </h1>
@@ -82,7 +82,7 @@ const Carousel = () => {
           {/* Left Arrow */}
           <button
             onClick={handlePrevious}
-            className="absolute left-0 transform -translate-x-6 flex items-center justify-center bg-blue-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-600 transition"
+            className="absolute left-0 transform -translate-x-6 flex items-center justify-center text-black w-12 h-12 hover:text-primary transition"
           >
             <ChevronLeftIcon />
           </button>
@@ -97,7 +97,7 @@ const Carousel = () => {
               </h3>
               <img
                 src={currentSlide.image}
-                className="object-cover w-full !h-auto lg:h-96"
+                className="object-cover !w-[612px] h-[653px] rounded-3xl mt-3"
               />
             </div>
 
@@ -132,7 +132,7 @@ const Carousel = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute right-0 transform translate-x-6 flex items-center justify-center bg-green-500 text-white w-12 h-12 rounded-full shadow-lg hover:bg-green-600 transition"
+            className="absolute right-0 transform translate-x-6 flex items-center justify-center text-black w-12 h-12 hover:text-primary transition"
           >
             <ChevronRightIcon />
           </button>
@@ -146,7 +146,7 @@ const Carousel = () => {
               onClick={() => handleDotClick(index)}
               className={`w-3 h-3 rounded-full ${
                 index === currentIndex
-                  ? "bg-blue-500"
+                  ? "bg-black"
                   : "bg-gray-300 hover:bg-gray-400"
               }`}
             ></button>
