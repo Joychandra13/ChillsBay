@@ -1,0 +1,20 @@
+import React from 'react'
+import {CircularProgress} from "@nextui-org/react";
+
+
+function Nevbar() {
+  return (
+    <>
+    <div className="flex gap-4">
+      <CircularProgress color="default" aria-label="Loading..."/>
+      <CircularProgress color="primary" aria-label="Loading..."/>
+      <CircularProgress color="secondary" aria-label="Loading..."/>
+      <CircularProgress color="success" aria-label="Loading..."/>
+      <CircularProgress color="warning" aria-label="Loading..."/>
+      <CircularProgress color="danger" aria-label="Loading..."/>
+    </div> 
+    </>
+  )
+}
+
+export default Nevbar
