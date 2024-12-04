@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Autocomplete,
-  AutocompleteItem,
-  Button,
-} from "@nextui-org/react";
+import { Autocomplete, AutocompleteItem, Button } from "@nextui-org/react";
 
 function HeroArea() {
   return (
@@ -60,13 +56,13 @@ function HeroArea() {
                   className="text-black"
                 >
                   25/05/25
-                  </AutocompleteItem>
+                </AutocompleteItem>
                 <AutocompleteItem
                   value="Hablu Programmer"
                   className="text-black"
                 >
                   3/06/25
-                  </AutocompleteItem>
+                </AutocompleteItem>
               </Autocomplete>
             </div>
             <div>
