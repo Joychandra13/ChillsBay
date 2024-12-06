@@ -1,5 +1,7 @@
 import './App.css'
 import Carousel from './components/Carousel'
+import Footer from './components/Footer'
+import GALARY from './components/GALARY'
 import HeroArea from './components/HeroArea'
 import ImgSection from './components/ImgSection'
 import Nevbar from './components/Nevbar'
@@ -16,6 +18,8 @@ function App() {
     <ThingsCard/>
     <WhyUs/>
     <Carousel/>
+    <GALARY/>
+    <Footer/>
     </>
   )
 }

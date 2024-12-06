@@ -7,7 +7,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 const carouselData = [
   {
     id: 1,
-    image: "/slider.png",
+    image: "/img5.png",
     heading: "Wizkid made in lagos tour",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -91,13 +91,13 @@ const Carousel = () => {
           <div className="flex flex-col lg:flex-row items-center gap-6 w-full px-12">
             {/* Left Side: Image */}
             <div className="w-full lg:w-1/2">
-              <h3 className="text-2xl font-semibold text-[#26395C] ms-10">
+              <h3 className="text-2xl font-semibold text-[#26395C] md:ms-10">
                 {" "}
                 Upcoming events this weekend
               </h3>
               <img
                 src={currentSlide.image}
-                className="object-cover !w-[612px] h-[653px] rounded-3xl mt-3"
+                className="object-cover md:w-[612px] md:h-[653px] rounded-3xl mt-3"
               />
             </div>
 
@@ -106,7 +106,7 @@ const Carousel = () => {
               <h2 className="text-2xl lg:text-5xl font-bold md:w-[50%]">
                 {currentSlide.heading}
               </h2>
-              <p className="text-gray-700 md:w-[65%] text-xl">
+              <p className="text-gray-700 lg:w-[65%] text-xl">
                 {currentSlide.description}
               </p>
 
@@ -124,7 +124,14 @@ const Carousel = () => {
                 </Button>  
                 <Button color="primary" size="lg">Book Now</Button>
               </div>
+              <div className="flex gap-4 mt-5">
+                <p>Connect with us on:</p>
 
+                <div className="flex gap-3">
+                  <img src="/Twitter.png" alt="" />
+                  <img src="/Instagram.png" alt="" />
+                </div>
+              </div>
 
             </div>
           </div>
