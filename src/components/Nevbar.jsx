@@ -17,7 +17,13 @@ import {
   Button,
 } from "@nextui-org/react";
 
-import { ChevronDownIcon, UserIcon } from "@heroicons/react/24/outline";
+const value = true;
+import { ChevronDownIcon,} from "@heroicons/react/24/outline";
+import MyModal from "./Home/Modal";
+import ProfileDropDown from "./Home/Dropdown";
+import { NavLink } from "react-router";
+
+
 
 function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +51,9 @@ function MyNavbar() {
 
         <NavbarContent className="sm:hidden pr-3">
           <NavbarBrand>
-            <img className="w-44 " src="/ChillsBay.png" alt="" />
+          <NavLink to="/">{" "}
+              <img className="w-44 " src="/ChillsBay.png" alt="" />{" "}
+            </NavLink>
           </NavbarBrand>
         </NavbarContent>
 
@@ -54,17 +62,28 @@ function MyNavbar() {
         <NavbarContent className="hidden sm:flex gap-4  w-full justify-center">
           <NavbarBrand>
             <NavbarBrand>
-              {" "}
-              <img className="w-44 " src="/ChillsBay.png" alt="" />
+            <NavLink to="/">{" "}
+              <img className="w-44 " src="/ChillsBay.png" alt="" />{" "}
+            </NavLink>
             </NavbarBrand>
           </NavbarBrand>
           <NavbarItem>
-            <Link className="text-black">Eat & drink</Link>
+          <NavLink
+              to="/drink"
+              className="text-black"
+              style={({ isActive }) => ({
+                color: isActive ? "#0E8BFF" : "black",
+              })}
+            >
+              Eat & drink
+            </NavLink>
           </NavbarItem>
           <NavbarItem>
-            <Link>
-              Club <sup className="!bg-blue-600 text-[8px] px-2 ">+HOT</sup>
-            </Link>
+         
+          <NavLink to="/club"   style={({ isActive }) => ({
+                color: isActive ? "#0E8BFF" : "black",
+              })}>    Club <sup className=" text-[8px] px-2 py-0.5 bg-[#0E8BFF] text-white rounded-full">+HOT</sup></NavLink>
+           
           </NavbarItem>
           <NavbarItem>
             <Dropdown>
@@ -97,19 +116,7 @@ function MyNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Dropdown>
-              <DropdownTrigger>
-                <Button variant="none">
-                  {" "}
-                  <UserIcon className="text-gray-500 w-4 h-4" /> Account{" "}
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="profile">
-                <DropdownItem key="new">New file</DropdownItem>
-                <DropdownItem key="copy">Copy link</DropdownItem>
-                <DropdownItem key="edit">Edit file</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            {value === true ? <MyModal/> : <ProfileDropDown/>}
           </NavbarItem>
           <NavbarItem>
             <Button color="primary">Contact Now</Button>

@@ -1,25 +1,28 @@
 import './App.css'
-import Carousel from './components/Carousel'
+import ClubPage from './components/Club/ClubPage';
+import EatAndDrinkPage from './components/Eat & Drink/EatAndDrinkPage';
+
 import Footer from './components/Footer'
-import GALARY from './components/GALARY'
-import HeroArea from './components/HeroArea'
-import ImgSection from './components/ImgSection'
+import HomePage from './components/Home'
 import Nevbar from './components/Nevbar'
-import ThingsCard from './components/ThingsToDo'
-import WhyUs from './components/WhyUse'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
 
   return (
     <>
+    <Router>
     <Nevbar/>
-    <HeroArea/>
-    <ImgSection/>
-    <ThingsCard/>
-    <WhyUs/>
-    <Carousel/>
-    <GALARY/>
-    <Footer/>
+      <Routes>
+        <Route>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/eatanddrink" element={<EatAndDrinkPage/>}></Route>
+          <Route path="/club" element={<ClubPage/>}></Route>
+        </Route>
+      </Routes>
+      <Footer/>
+    </Router>
     </>
   )
 }
