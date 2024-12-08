@@ -51,8 +51,8 @@ function MyNavbar() {
 
         <NavbarContent className="sm:hidden pr-3">
           <NavbarBrand>
-          <NavLink to="/">{" "}
-              <img className="w-44 " src="/ChillsBay.png" alt="" />{" "}
+          <NavLink to="/">
+              <img className="w-44 " src="/ChillsBay.png" alt="" />
             </NavLink>
           </NavbarBrand>
         </NavbarContent>
@@ -62,8 +62,8 @@ function MyNavbar() {
         <NavbarContent className="hidden sm:flex gap-4  w-full justify-center">
           <NavbarBrand>
             <NavbarBrand>
-            <NavLink to="/">{" "}
-              <img className="w-44 " src="/ChillsBay.png" alt="" />{" "}
+            <NavLink to="/">
+              <img className="w-44 " src="/ChillsBay.png" alt="" />
             </NavLink>
             </NavbarBrand>
           </NavbarBrand>
