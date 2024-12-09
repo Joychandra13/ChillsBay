@@ -2,11 +2,8 @@ import React, { useState } from "react";
 import {
   Modal,
   ModalContent,
-  ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
-  useDisclosure,
 } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import { UserIcon } from "@heroicons/react/24/outline";
