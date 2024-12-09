@@ -116,7 +116,7 @@ function MyNavbar() {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <ProfileDropDown />
+            {value === true ? <MyModal /> : <ProfileDropDown />}
           </NavbarItem>
           <NavbarItem>
             <Button color="primary">Contact Now</Button>
